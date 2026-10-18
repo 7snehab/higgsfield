@@ -25,8 +25,14 @@ app.get("/health", (_req, res) => {
 
 import authRouter from "./routes/auth.route";
 import { errMiddleware } from "./middlewares/global_error_handler";
+import avatarRouter from "./routes/avatar.route.ts";
+import videoRouter from "./routes/video.route.ts";
+import modelRouter from "./routes/model.route.ts";
 
 app.use("/auth", authRouter);
+app.use("/avatar", avatarRouter);
+app.use("/video", videoRouter);
+app.use("/model", modelRouter);
 
 app.use(errMiddleware);
 

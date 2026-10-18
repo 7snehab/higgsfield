@@ -10,3 +10,8 @@ export const signinSchema = signupSchema.pick({
   email: true,
   password: true,
 });
+
+export const avatarSchema = z.object({
+  name: z.string(),
+  images: z.string(),
+});
