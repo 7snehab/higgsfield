@@ -37,5 +37,5 @@ app.use("/model", modelRouter);
 app.use(errMiddleware);
 
 app.listen(PORT, () => {
-  console.log("server started");
+  console.log("server started", PORT);
 });
